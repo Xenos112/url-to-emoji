@@ -31,11 +31,6 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    print(f"Message from {message.author}: {message.content}")
-
-    # Simple reply logic
-    await message.channel.send(f"Hello, {message.author.mention}!")
-
     # IMPORTANT: Allow prefix commands to work alongside on_message
     await bot.process_commands(message)
 
